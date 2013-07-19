@@ -1,0 +1,13 @@
+%html
+  %head
+    %title
+  %body
+    %p shit
+    %p
+      = @payment
+      - if @payment.execute( :payer_id => "DUFRQ8GWYMJXC" )
+        Success Message
+      - else
+        = @payment.error # Error Hash
+
+
